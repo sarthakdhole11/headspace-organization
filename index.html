@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>HEADSPACE</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#f7f3ec;
+  color:#1e1e1e;
+  overflow-x:hidden;
+}
+
+header{
+  width:100%;
+  padding:24px 60px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1000;
+  backdrop-filter:blur(10px);
+  background:rgba(247,243,236,0.82);
+}
+
+.logo{
+  letter-spacing:8px;
+  font-size:22px;
+  font-weight:600;
+}
+
+nav{
+  display:flex;
+  gap:34px;
+  font-size:14px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#1e1e1e;
+}
+
+.btn{
+  padding:12px 22px;
+  border-radius:999px;
+  border:none;
+  cursor:pointer;
+  font-weight:500;
+}
+
+.primary{
+  background:#5f765d;
+  color:white;
+}
+
+.secondary{
+  background:transparent;
+  border:1px solid rgba(0,0,0,0.15);
+}
+
+.hero{
+  padding-top:140px;
+  text-align:center;
+}
+
+.marquee-wrap{
+  width:100%;
+  overflow:hidden;
+  border-top:1px solid rgba(0,0,0,0.08);
+  border-bottom:1px solid rgba(0,0,0,0.08);
+  padding:14px 0;
+  margin-bottom:55px;
+}
+
+.marquee{
+  display:inline-block;
+  white-space:nowrap;
+  animation:scroll 28s linear infinite;
+  font-size:14px;
+  letter-spacing:1px;
+  color:#444;
+}
+
+@keyframes scroll{
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
+}
+
+.est{
+  font-size:12px;
+  letter-spacing:5px;
+  opacity:.55;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:78px;
+  line-height:0.95;
+  max-width:900px;
+  margin:auto;
+}
+
+.hero p{
+  max-width:700px;
+  margin:26px auto 38px;
+  font-size:19px;
+  line-height:1.7;
+  color:#555;
+}
+
+.cta{
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.stats{
+  width:85%;
+  margin:90px auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+
+.card{
+  background:white;
+  border-radius:28px;
+  padding:40px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.04);
+}
+
+.card.green{
+  background:#e6efe2;
+}
+
+.number{
+  font-size:48px;
+  margin-bottom:12px;
+  font-weight:600;
+}
+
+.story{
+  width:85%;
+  margin:0 auto 100px;
+}
+
+.story-box{
+  background:#1f1f1f;
+  color:white;
+  border-radius:38px;
+  padding:60px;
+  transition:0.3s ease;
+  cursor:pointer;
+}
+
+.story-box:hover{
+  transform:translateY(-6px);
+}
+
+.story-box small{
+  letter-spacing:4px;
+  opacity:.55;
+}
+
+.story-box h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:58px;
+  margin:16px 0;
+}
+
+.story-box p{
+  color:rgba(255,255,255,0.75);
+  max-width:620px;
+  line-height:1.8;
+}
+
+.arrow{
+  margin-top:24px;
+  font-size:34px;
+  animation:bounce 1.4s infinite;
+}
+
+@keyframes bounce{
+  0%,100%{transform:translateX(0);}
+  50%{transform:translateX(10px);}
+}
+
+footer{
+  text-align:center;
+  padding:0 20px 100px;
+}
+
+footer h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:44px;
+  margin-bottom:12px;
+}
+
+footer p{
+  max-width:620px;
+  margin:auto;
+  color:#666;
+  line-height:1.8;
+}
+
+@media(max-width:900px){
+
+header{
+  padding:20px;
+}
+
+nav{
+  display:none;
+}
+
+.hero h1{
+  font-size:52px;
+}
+
+.stats{
+  grid-template-columns:1fr;
+}
+
+.story-box h2{
+  font-size:42px;
+}
+
+.story, .stats{
+  width:92%;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">HEADSPACE</div>
+
+<nav>
+<a href="#">About</a>
+<a href="#">Groups</a>
+<a href="#">Founder</a>
+<a href="#">Contact</a>
+</nav>
+
+<button class="btn primary">Join Us</button>
+</header>
+
+<section class="hero">
+
+<div class="marquee-wrap">
+<div class="marquee">
+Recognized by the Indian Medical Association • A home to 40+ patients • 4 cities • Online worldwide • Est. 2025, Akola • Recognized by the Indian Medical Association • A home to 40+ patients • 4 cities • Online worldwide •
+</div>
+</div>
+
+<div class="est">EST. 2025 • AKOLA</div>
+
+<h1>A place where confidence grows back.</h1>
+
+<p>
+For people living with alopecia, HEADSPACE offers belonging, support circles,
+healing conversations, and a new story to step into.
+</p>
+
+<div class="cta">
+<button class="btn primary">Join a Support Group</button>
+<button class="btn secondary">Hear the Founder Story</button>
+</div>
+
+</section>
+
+<section class="stats">
+
+<div class="card">
+<div class="number">40+</div>
+<p>Patients supported through community, conversation and care.</p>
+</div>
+
+<div class="card green">
+<div class="number">4</div>
+<p>Cities connected through in-person support circles.</p>
+</div>
+
+<div class="card">
+<div class="number">∞</div>
+<p>Online support open to anyone who needs a safe space.</p>
+</div>
+
+</section>
+
+<section class="story">
+
+<div class="story-box" onclick="window.location.href='bear.html'">
+<small>ANIMATED FEATURE</small>
+<h2>Hear from Bear, the Builder</h2>
+<p>
+A playful voice with real wisdom. Enter Bear’s world for courage,
+comfort and perspective.
+</p>
+<div class="arrow">→</div>
+</div>
+
+</section>
+
+<footer>
+<h3>You are not alone here.</h3>
+<p>
+Some arrive quietly. Some arrive hurting. Everyone arrives welcome.
+</p>
+</footer>
+
+</body>
+</html>
