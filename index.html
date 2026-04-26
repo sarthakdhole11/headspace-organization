@@ -22,6 +22,26 @@ body{
   overflow-x:hidden;
 }
 
+/* FLOATERS */
+.float{
+  position:fixed;
+  pointer-events:none;
+  opacity:.45;
+  z-index:1;
+  animation:drift 8s ease-in-out infinite;
+}
+
+.f1{top:18%;left:4%;font-size:24px;}
+.f2{top:70%;left:6%;font-size:18px;animation-delay:1s;}
+.f3{top:24%;right:7%;font-size:22px;animation-delay:2s;}
+.f4{top:60%;right:5%;font-size:20px;animation-delay:3s;}
+.f5{top:84%;right:18%;font-size:18px;animation-delay:4s;}
+
+@keyframes drift{
+  0%,100%{transform:translateY(0px);}
+  50%{transform:translateY(-12px);}
+}
+
 /* HEADER */
 
 header{
@@ -119,6 +139,8 @@ nav a{
   grid-template-columns:1fr 430px;
   gap:70px;
   align-items:center;
+  position:relative;
+  z-index:2;
 }
 
 .left{
@@ -175,7 +197,7 @@ h1{
   border:1px solid rgba(0,0,0,.08);
 }
 
-/* RIGHT SIDE BEAR */
+/* RIGHT SIDE */
 
 .side{
   display:flex;
@@ -209,6 +231,17 @@ h1{
   letter-spacing:1.5px;
 }
 
+/* DOODLES BACK */
+.doodle{
+  position:absolute;
+  font-size:18px;
+  opacity:.45;
+}
+
+.d1{top:18px;left:18px;}
+.d2{right:22px;bottom:120px;}
+.d3{left:24px;bottom:145px;}
+
 .bear{
   width:100%;
   height:260px;
@@ -235,11 +268,43 @@ h1{
   font-size:28px;
 }
 
+/* BOTTOM TILES BACK */
+
+.grid{
+  max-width:1240px;
+  margin:auto;
+  padding:0 42px 90px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+
+.box{
+  background:white;
+  border-radius:28px;
+  padding:34px;
+  min-height:210px;
+  box-shadow:0 14px 30px rgba(0,0,0,.04);
+}
+
+.num{
+  font-size:52px;
+  margin-bottom:12px;
+  font-weight:600;
+}
+
+.small{
+  margin-top:14px;
+  font-size:12px;
+  letter-spacing:2px;
+  opacity:.5;
+}
+
 /* FOOTER */
 
 footer{
   text-align:center;
-  padding:40px 20px 90px;
+  padding:10px 20px 90px;
 }
 
 footer h3{
@@ -265,6 +330,11 @@ nav{
   padding:55px 22px 40px;
 }
 
+.grid{
+  grid-template-columns:1fr;
+  padding:0 22px 80px;
+}
+
 h1{
   font-size:58px;
 }
@@ -282,6 +352,13 @@ h1{
 </head>
 <body>
 
+<!-- FLOATERS BACK -->
+<div class="float f1">✦</div>
+<div class="float f2">☁</div>
+<div class="float f3">♡</div>
+<div class="float f4">✺</div>
+<div class="float f5">•</div>
+
 <header>
 <div class="logo">HEADSPACE</div>
 
@@ -298,7 +375,6 @@ h1{
 
 <section class="hero">
 
-<!-- FIXED UNIFORM ENDLESS BAR -->
 <div class="bar">
 <div class="track">
 
@@ -319,7 +395,6 @@ h1{
 
 <div class="wrap">
 
-<!-- LEFT -->
 <div class="left">
 
 <div class="mini">EST. 2025 • AKOLA</div>
@@ -338,7 +413,6 @@ Support circles, healing conversations, brave stories and belonging.
 
 </div>
 
-<!-- RIGHT -->
 <div class="side">
 
 <a href="bear.html" style="text-decoration:none;color:inherit;width:100%;max-width:430px;">
@@ -346,6 +420,10 @@ Support circles, healing conversations, brave stories and belonging.
 <div class="card">
 
 <div class="pin">Our mascot!</div>
+
+<div class="doodle d1">✦</div>
+<div class="doodle d2">♡</div>
+<div class="doodle d3">☼</div>
 
 <img src="bear.png" class="bear" alt="Bear the Builder">
 
@@ -362,6 +440,29 @@ This bear has comforted our founder since 2023.
 
 </a>
 
+</div>
+
+</div>
+
+<!-- TILES BACK -->
+<div class="grid">
+
+<div class="box">
+<div class="num">40+</div>
+People supported through care, humour and honest conversation.
+<div class="small">COMMUNITY FIRST</div>
+</div>
+
+<div class="box">
+<div class="num">4</div>
+Cities connected through local circles and meetups.
+<div class="small">GROWING GENTLY</div>
+</div>
+
+<div class="box">
+<div class="num">∞</div>
+Online spaces open to all.
+<div class="small">YOU BELONG HERE</div>
 </div>
 
 </div>
